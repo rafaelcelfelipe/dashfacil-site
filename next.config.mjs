@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  basePath: '',
+  assetPrefix: '',
 
   webpack(config) {
     // Grab the existing rule that handles SVG imports

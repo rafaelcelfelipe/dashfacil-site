@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/',
+        permanent: false,
+      },
+    ];
+  },
+  
   output: 'standalone',
   basePath: '',
   assetPrefix: '',

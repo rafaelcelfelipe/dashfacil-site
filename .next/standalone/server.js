@@ -16,3 +16,7 @@ app.prepare().then(() => {
     console.log(`> Ready on http://localhost:${port}`); // Log para desenvolvimento
   });
 });
+
+dotenv,config({
+  path: 'config.env'
+});

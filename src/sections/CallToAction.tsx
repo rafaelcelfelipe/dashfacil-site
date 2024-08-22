@@ -1,7 +1,7 @@
 "use client";
-import ArrowRight from "@publicpublic/assets/arrow-right.svg";
-import starImage from "@public/assets/star.png";
-import springImage from "@public/assets/spring.png";
+import ArrowRight from "public/assets/arrow-right.svg";
+import starImage from "public/assets/star.png";
+import springImage from "public/assets/spring.png";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";

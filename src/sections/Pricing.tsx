@@ -1,5 +1,5 @@
 "use client";
-import CheckIcon from "@/assets/check.svg";
+import CheckIcon from "@public/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 

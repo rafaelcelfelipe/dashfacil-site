@@ -1,9 +1,8 @@
 "use client";
-import ArrowIcon from "assets/arrow-right.svg";
-import cogImage from "assets/cog.png";
-import cylinderImage from "assets/cylinder.png";
-import noodleImage from "assets/noodle.png";
-import Image from "next/image";
+import ArrowIcon from "@/assets/arrow-right.svg";
+import cogImage from "@/assets/cog.png";
+import cylinderImage from "@/assets/cylinder.png";
+import noodleImage from "@/assets/noodle.png";
 import {
   motion,
   useScroll,

@@ -1,10 +1,4 @@
 "use client";
-import acmeLogo from "assets/logo-acme.png";
-import quantumLogo from "assets/logo-quantum.png";
-import echoLogo from "assets/logo-echo.png";
-import celestialLogo from "assets/logo-celestial.png";
-import pulseLogo from "assets/logo-pulse.png";
-import apexLogo from "assets/logo-apex.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -26,64 +20,64 @@ export const LogoTicker = () => {
             }}
           >
             <Image
-              src={acmeLogo}
+              src='/assets/logo-acme.png'
               alt="Acme Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
+              src='/assets/logo-quantum.png'
               alt="Quantum Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
+              src='/assets/logo-echo.png'
               alt="Echo Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={celestialLogo}
+              src='/assets/logo-celestial.png'
               alt="Celestial Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={pulseLogo}
+              src='/assets/logo-pulse.png'
               alt="Pulse Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={apexLogo}
+              src='/assets/logo-apex.png'
               alt="Apex Logo"
               className="logo-ticker-image"
             />
 
             {/* Second set of logos for animation */}
             <Image
-              src={acmeLogo}
+              src='/assets/logo-acme.png'
               alt="Acme Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={quantumLogo}
+              src='/assets/logo-quantum.png'
               alt="Quantum Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={echoLogo}
+              src='/assets/logo-echo.png'
               alt="Echo Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={celestialLogo}
+              src='/assets/logo-celestial.png'
               alt="Celestial Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={pulseLogo}
+              src='/assets/logo-pulse.png'
               alt="Pulse Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={apexLogo}
+              src='/assets/logo-apex.png'
               alt="Apex Logo"
               className="logo-ticker-image"
             />

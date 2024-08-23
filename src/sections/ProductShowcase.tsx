@@ -1,7 +1,6 @@
 "use client";
-import productImage from "assets/product-image.png";
-import pyramidImage from "assets/pyramid.png";
-import tubeImage from "assets/tube.png";
+import pyramidImage from "@/assets/pyramid.png";
+import tubeImage from "@/assets/tube.png";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -32,7 +31,7 @@ export const ProductShowcase = () => {
           </p>
         </div>
         <div className="relative">
-          <Image src={productImage} alt="Product Image" className="mt-10" />
+          <Image src='/assets/product-image.png' alt="Product Image" className="mt-10" />
           <motion.img
             src={pyramidImage.src}
             alt="Pyramid Image"

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export const LogoTicker = () => {
@@ -19,64 +18,64 @@ export const LogoTicker = () => {
               repeatType: "loop",
             }}
           >
-            <Image
+            <img
               src='/assets/logo-acme.png'
               alt="Acme Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-quantum.png'
               alt="Quantum Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-echo.png'
               alt="Echo Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-celestial.png'
               alt="Celestial Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-pulse.png'
               alt="Pulse Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-apex.png'
               alt="Apex Logo"
               className="logo-ticker-image"
             />
 
             {/* Second set of logos for animation */}
-            <Image
+            <img
               src='/assets/logo-acme.png'
               alt="Acme Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-quantum.png'
               alt="Quantum Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-echo.png'
               alt="Echo Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-celestial.png'
               alt="Celestial Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-pulse.png'
               alt="Pulse Logo"
               className="logo-ticker-image"
             />
-            <Image
+            <img
               src='/assets/logo-apex.png'
               alt="Apex Logo"
               className="logo-ticker-image"

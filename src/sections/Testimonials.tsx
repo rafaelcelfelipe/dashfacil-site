@@ -115,9 +115,9 @@ export const Testimonials = () => {
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Testimonials</div>
+            <div className="tag">Depoimentos</div>
           </div>
-          <h2 className="section-title mt-5">What our users say</h2>
+          <h2 className="section-title mt-5">O que os usuários dizem</h2>
           <p className="section-description mt-5">
             From intuitive design to powerful features, our app has become an
             essential tool for users around the world.

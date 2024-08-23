@@ -19,10 +19,10 @@ export const ProductShowcase = () => {
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Boost your productivity</div>
+            <div className="tag">Evolua seu lançamento</div>
           </div>
           <h2 className="section-title mt-5">
-            A more effective way to track progress
+            Uma maneira efetiva de investir certo
           </h2>
           <p className="section-description mt-5">
             Effortlessly turn your ideas into a fully functional, responsive,

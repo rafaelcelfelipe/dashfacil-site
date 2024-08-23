@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const pricingTiers = [
   {
-    title: "Free",
-    monthlyPrice: 0,
-    buttonText: "Get started for free",
+    title: "Iniciante",
+    monthlyPrice: 97,
+    buttonText: "Assinar",
     popular: false,
     inverse: false,
     features: [
@@ -19,9 +19,9 @@ const pricingTiers = [
     ],
   },
   {
-    title: "Pro",
-    monthlyPrice: 9,
-    buttonText: "Sign up now",
+    title: "Avançado",
+    monthlyPrice: 297,
+    buttonText: "Assinar",
     popular: true,
     inverse: true,
     features: [
@@ -35,8 +35,8 @@ const pricingTiers = [
     ],
   },
   {
-    title: "Business",
-    monthlyPrice: 19,
+    title: "Empresas",
+    monthlyPrice: 497,
     buttonText: "Sign up now",
     popular: false,
     inverse: false,
@@ -60,7 +60,7 @@ export const Pricing = () => {
     <section className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
-          <h2 className="section-title">Pricing</h2>
+          <h2 className="section-title">Planos</h2>
           <p className="section-description mt-5">
             Free forever. Upgrade for unlimited tasks, better security, and
             exclusive features.
@@ -113,10 +113,10 @@ export const Pricing = () => {
                 </div>
                 <div className="flex items-baseline gap-1 mt-[30px]">
                   <span className="text-4xl font-bold tracking-tighter leading-none">
-                    ${monthlyPrice}
+                    R${monthlyPrice}
                   </span>
                   <span className="tracking-tight font-bold text-black/50">
-                    /month
+                    /mês
                   </span>
                 </div>
                 <button

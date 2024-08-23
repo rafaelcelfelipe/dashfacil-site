@@ -13,9 +13,15 @@ export default function Home() {
       <Header />
       <Hero />
       <LogoTicker />
+      <section id="funcionalidades">
       <ProductShowcase />
+      </section>
+      <section id="planos">
       <Pricing />
+      </section>
+      <section id='clientes'>
       <Testimonials />
+      </section>
       <CallToAction />
       <Footer />
     </>

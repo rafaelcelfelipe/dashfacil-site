@@ -115,7 +115,7 @@ export const Pricing = () => {
                   <span className="text-4xl font-bold tracking-tighter leading-none">
                     R${monthlyPrice}
                   </span>
-                  <span className="tracking-tight font-bold text-black/50">
+                  <span className={twMerge("tracking-tight font-bold text-black/50", inverse === true && 'text-white')}>
                     /mês
                   </span>
                 </div>

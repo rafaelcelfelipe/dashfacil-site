@@ -1,10 +1,10 @@
 import Image from "next/image";
-import logo from "@/assets/logosaas.png";
-import SocialX from "@/assets/social-x.svg";
-import SocialInsta from "@/assets/social-insta.svg";
-import SocialLinkedIn from "@/assets/social-linkedin.svg";
-import SocialPin from "@/assets/social-pin.svg";
-import SocialYoutube from "@/assets/social-youtube.svg";
+import logo from "assets/logosaas.png";
+import SocialX from "assets/social-x.svg";
+import SocialInsta from "assets/social-insta.svg";
+import SocialLinkedIn from "assets/social-linkedin.svg";
+import SocialPin from "assets/social-pin.svg";
+import SocialYoutube from "assets/social-youtube.svg";
 
 export const Footer = () => {
   return (

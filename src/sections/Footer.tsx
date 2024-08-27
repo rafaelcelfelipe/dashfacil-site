@@ -17,8 +17,8 @@ export const Footer = () => {
           <a href="#clientes">Clientes</a>
           <a href="#planos">Planos</a>
           <a href="https://wa.me/11977792099">Ajuda</a>
-          <a href="#">Políticas de privacidade</a>
-          <a href="#">Termos de uso</a>
+          <a href="https://dashfacil.com/politicas-de-privacidade">Políticas de privacidade</a>
+          <a href="https://dashfacil.com/termos-de-uso">Termos de uso</a>
         </nav>
         <div className="flex justify-center gap-6 mt-6">
           <SocialX />

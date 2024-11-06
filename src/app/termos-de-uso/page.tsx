@@ -1,4 +1,4 @@
-export default function Home() {
+export default function TermosDeUso() {
     return (
     <div className="bg-white px-5 py-5">
         <h2 className="text-lg font-bold mb-5 mt-5"><span>1. Termos</span></h2>

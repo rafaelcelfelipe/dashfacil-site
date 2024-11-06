@@ -25,8 +25,7 @@ export const ProductShowcase = () => {
             Uma maneira efetiva de investir certo
           </h2>
           <p className="section-description mt-5">
-            Effortlessly turn your ideas into a fully functional, responsive,
-            SaaS website in just minutes with this template.
+            Com dashboards completos, você poderá analisar cada dado do seu lançamento e usar isso para otimizar suas campanhas
           </p>
         </div>
         <div className="relative">

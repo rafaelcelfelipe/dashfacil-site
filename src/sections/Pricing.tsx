@@ -11,11 +11,10 @@ const pricingTiers = [
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "2GB storage",
-      "Integrations",
-      "Basic support",
+      "1 subconta",
+      "Até 50 mil leads",
+      "Criação de dashboards",
+      "Atualização automática",
     ],
   },
   {
@@ -25,32 +24,27 @@ const pricingTiers = [
     popular: true,
     inverse: true,
     features: [
-      "Up to 50 project members",
-      "Unlimited tasks and projects",
-      "50GB storage",
-      "Integrations",
-      "Priority support",
-      "Advanced support",
-      "Export support",
+      "Até 5 subcontas",
+      "Até 250 mil leads",
+      "Criação de dashboards",
+      "Atualização automática",
+      "Ferramentas com IA",
+      "Criador de debriefing",
     ],
   },
   {
     title: "Empresas",
     monthlyPrice: 497,
-    buttonText: "Sign up now",
+    buttonText: "Assinar",
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "200GB storage",
-      "Integrations",
-      "Dedicated account manager",
-      "Custom fields",
-      "Advanced analytics",
-      "Export capabilities",
-      "API access",
-      "Advanced security features",
+      "Até 20 subcontas",
+      "Até 1,5M leads",
+      "Criação de dashboards",
+      "Atualização automática",
+      "Ferramentas com IA",
+      "Criador de debriefing",
     ],
   },
 ];
@@ -62,8 +56,7 @@ export const Pricing = () => {
         <div className="section-heading">
           <h2 className="section-title">Planos</h2>
           <p className="section-description mt-5">
-            Free forever. Upgrade for unlimited tasks, better security, and
-            exclusive features.
+            Escolha o que mais se encaixa com você
           </p>
         </div>
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">

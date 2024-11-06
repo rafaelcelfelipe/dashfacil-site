@@ -4,55 +4,55 @@ import React from "react";
 
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+    text: "O software facilitou nossa análise de dados e reduziu custos significativamente!",
     imageSrc: '/assets/avatar-1.png',
     name: "Jamie Rivera",
     username: "@jamietechguru00",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Agora analisamos dados facilmente e economizamos nos lançamentos. Excelente!",
     imageSrc: '/assets/avatar-2.png',
     name: "Josh Smith",
     username: "@jjsmith",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
+    text: "Dashboard automático revolucionou nossa empresa. Simples e econômico!",
     imageSrc: '/assets/avatar-3.png',
     name: "Morgan Lee",
     username: "@morganleewhiz",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    text: "Facilidade na análise e redução de custos. Software indispensável!",
     imageSrc: '/assets/avatar-4.png',
     name: "Casey Jordan",
     username: "@caseyj",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+    text: "Analisar dados nunca foi tão fácil e econômico. Recomendo!",
     imageSrc: '/assets/avatar-5.png',
     name: "Taylor Kim",
     username: "@taylorkimm",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
+    text: "Economizamos tempo e dinheiro com este software de dashboards automáticos.",
     imageSrc: '/assets/avatar-6.png',
     name: "Riley Smith",
     username: "@rileysmith1",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+    text: "Facilita nossas decisões com dados claros e redução de custos",
     imageSrc: '/assets/avatar-7.png',
     name: "Jordan Patels",
     username: "@jpatelsdesign",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    text: "Software incrível: análise simples e custos menores nos lançamentos.",
     imageSrc: '/assets/avatar-8.png',
     name: "Sam Dawson",
     username: "@dawsontechtips",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
+    text: "Melhoramos nossas análises e reduzimos custos com este software eficiente!",
     imageSrc: '/assets/avatar-9.png',
     name: "Casey Harper",
     username: "@casey09",
@@ -119,8 +119,7 @@ export const Testimonials = () => {
           </div>
           <h2 className="section-title mt-5">O que os usuários dizem</h2>
           <p className="section-description mt-5">
-            From intuitive design to powerful features, our app has become an
-            essential tool for users around the world.
+            De facilidade ao analisar os dados, a redução de custos de tráfego
           </p>
         </div>
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">

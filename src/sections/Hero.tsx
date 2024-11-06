@@ -32,9 +32,7 @@ export const Hero = () => {
               Caminho da sua escala
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Celebrate the joy of accomplishment with an app designed to track
-              your progress, motivate your efforts, and celebrate your
-              successes.
+              Crie dashboards profissionais e automáticos, gere relatórios, analise seus leads e muito mais
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <button className="btn btn-primary"><a href="#planos">Assine agora</a></button>

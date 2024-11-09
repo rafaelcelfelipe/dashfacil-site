@@ -1,5 +1,5 @@
 {
-  "/page": "app/page.js",
   "/politicas-de-privacidade/page": "app/politicas-de-privacidade/page.js",
-  "/termos-de-uso/page": "app/termos-de-uso/page.js"
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

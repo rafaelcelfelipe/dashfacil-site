@@ -11,6 +11,16 @@ export default function Politicas() {
             <p className="mb-5"><span>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</span></p>
             <h3><span>Uso das APIs do Google Workspace</span></h3>
             <p className="mb-5"><span>Confirmamos que não utilizamos as APIs do Google Workspace para desenvolver, melhorar ou treinar modelos generalizados de IA e/ou ML.</span></p>
+            <h3><span>Dados do Usuário do Google</span></h3>
+            <p className="mb-5"><span>Nosso aplicativo acessa dados específicos do Google para fornecer a funcionalidade prometida. Em particular, acessamos:</span></p>
+            <ul>
+                <li><span>Contas de anúncios disponíveis no Google Ads;</span></li>
+                <li><span>Dados de campanhas e anúncios do Google Ads;</span></li>
+                <li><span>Listas de formulários armazenadas no Google Drive;</span></li>
+                <li><span>Dados de formulários, incluindo perguntas e respostas.</span></li>
+            </ul>
+            <p className="mb-5"><span>Utilizamos esses dados exclusivamente para fornecer os serviços descritos e conforme autorizado pelo usuário. Não utilizamos os dados para quaisquer outros fins, incluindo desenvolvimento, melhoria ou treinamento de modelos de IA ou ML generalizados.</span></p>
+
             <h3><span>Compromisso do Usuário</span></h3>
             <p className="mb-5"><span>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Dash Fácil oferece no site e com caráter enunciativo, mas não limitativo:</span></p>
             <ul>

@@ -20,7 +20,9 @@ export default function Politicas() {
                 <li><span>Dados de formulários, incluindo perguntas e respostas.</span></li>
             </ul>
             <p className="mb-5"><span>Utilizamos esses dados exclusivamente para fornecer os serviços descritos e conforme autorizado pelo usuário. Não utilizamos os dados para quaisquer outros fins, incluindo desenvolvimento, melhoria ou treinamento de modelos de IA ou ML generalizados.</span></p>
-
+            <h3><span>Uso, Armazenamento e Compartilhamento de Dados do Usuário</span></h3>
+            <p className="mb-5"><span>Os dados do usuário do Google que acessamos são usados exclusivamente para fornecer e melhorar os serviços descritos, de acordo com a autorização do usuário.</span></p>
+            <p className="mb-5"><span>Esses dados são armazenados de forma segura e com proteções adequadas, enquanto forem necessários para os propósitos descritos. Não compartilhamos esses dados com terceiros, exceto conforme exigido por lei ou para fornecer serviços com o consentimento explícito do usuário.</span></p>
             <h3><span>Compromisso do Usuário</span></h3>
             <p className="mb-5"><span>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Dash Fácil oferece no site e com caráter enunciativo, mas não limitativo:</span></p>
             <ul>
@@ -28,6 +30,9 @@ export default function Politicas() {
                 <li><span>B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</span></li>
                 <li><span>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Dash Fácil, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</span></li>
             </ul>
+            <h3><span>Alterações na Política de Privacidade</span></h3>
+            <p className="mb-5"><span>Reservamo-nos o direito de atualizar esta política de privacidade periodicamente. Quando realizarmos mudanças, notificaremos os usuários através de email. Recomendamos revisar esta política periodicamente para se manter informado sobre nossas práticas.</span></p>
+
             <h3><span>Mais informações</span></h3>
             <p className="mb-5"><span>Esperamos que esta política esteja clara e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</span></p>
             <p className="mb-5"><span>Esta política é efetiva a partir de 27 de agosto de 2024, 11:33.</span></p>

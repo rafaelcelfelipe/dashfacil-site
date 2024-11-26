@@ -1,8 +1,8 @@
-// File: /Users/rafaelfelipe/Documents/Apps/dashfacil_landing_page/src/app/politicas-de-privacidade/page.tsx
-import * as entry from '../../../../src/app/politicas-de-privacidade/page.js'
+// File: /Users/rafaelfelipe/Documents/Apps/dashfacil_landing_page/src/app/success/page.tsx
+import * as entry from '../../../../src/app/success/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/politicas-de-privacidade/page.js')
+type TEntry = typeof import('../../../../src/app/success/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

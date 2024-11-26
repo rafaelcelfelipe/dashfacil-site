@@ -1,5 +1,6 @@
 {
-  "/politicas-de-privacidade/page": "app/politicas-de-privacidade/page.js",
+  "/success/page": "app/success/page.js",
+  "/api/create-checkout-session/route": "app/api/create-checkout-session/route.js",
   "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }

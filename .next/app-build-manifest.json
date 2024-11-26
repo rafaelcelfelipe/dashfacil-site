@@ -11,10 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/politicas-de-privacidade/page": [
+    "/success/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/politicas-de-privacidade/page.js"
+      "static/chunks/app/success/page.js"
     ]
   }
 }

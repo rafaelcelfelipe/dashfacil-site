@@ -2,6 +2,7 @@
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import { loadStripe } from '@stripe/stripe-js';
 
 const pricingTiers = [
   {
@@ -16,6 +17,7 @@ const pricingTiers = [
       "Criação de dashboards",
       "Atualização automática",
     ],
+    priceId: "price_1QPEcdCBhUqm7Nw3c4TNW0M5",
   },
   {
     title: "Avançado",
@@ -31,6 +33,7 @@ const pricingTiers = [
       "Ferramentas com IA",
       "Criador de debriefing",
     ],
+    priceId: "price_1QPLa4CBhUqm7Nw3rMqqkXz2",
   },
   {
     title: "Empresas",
@@ -46,10 +49,40 @@ const pricingTiers = [
       "Ferramentas com IA",
       "Criador de debriefing",
     ],
+    priceId: "price_1QPLaFCBhUqm7Nw3isw41bKJ",
   },
 ];
 
+
 export const Pricing = () => {
+  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+
+  const handleCheckout = async (priceId: string) => {
+    const stripe = await stripePromise;
+
+    const response = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ priceId }),
+    });
+
+    const data = await response.json();
+
+    if (data.sessionId) {
+      const result = await stripe!.redirectToCheckout({
+        sessionId: data.sessionId,
+      });
+
+      if (result.error) {
+        console.error(result.error.message);
+      }
+    } else {
+      console.error(data.error);
+    }
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="container">
@@ -68,6 +101,7 @@ export const Pricing = () => {
               popular,
               inverse,
               features,
+              priceId
             }, index) => (
               <div
                 key={index}
@@ -113,6 +147,7 @@ export const Pricing = () => {
                   </span>
                 </div>
                 <button
+                  onClick={() => handleCheckout(priceId)}
                   className={twMerge(
                     "btn btn-primary w-full mt-[30px]",
                     inverse === true && "bg-white text-black"

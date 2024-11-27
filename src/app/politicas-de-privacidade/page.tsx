@@ -61,4 +61,4 @@ export default function Politicas() {
             <p className="mb-5"><span>Se você tiver alguma dúvida ou preocupação sobre nossa política de privacidade ou sobre o tratamento de seus dados pessoais, entre em contato conosco pelo email: contato@dashfacil.com.</span></p>
         </div>
     )
-}
+};

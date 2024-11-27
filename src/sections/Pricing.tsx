@@ -17,7 +17,7 @@ const pricingTiers = [
       "Criação de dashboards",
       "Atualização automática",
     ],
-    priceId: "price_1QPEcdCBhUqm7Nw3c4TNW0M5",
+    checkout: "https://buy.stripe.com/test_14k4kg8bqejz4ak5kk",
   },
   {
     title: "Avançado",
@@ -33,7 +33,7 @@ const pricingTiers = [
       "Ferramentas com IA",
       "Criador de debriefing",
     ],
-    priceId: "price_1QPLa4CBhUqm7Nw3rMqqkXz2",
+    checkout: "https://buy.stripe.com/test_aEU5okdvK8ZfgX67st",
   },
   {
     title: "Empresas",
@@ -49,7 +49,7 @@ const pricingTiers = [
       "Ferramentas com IA",
       "Criador de debriefing",
     ],
-    priceId: "price_1QPLaFCBhUqm7Nw3isw41bKJ",
+    checkout: "https://buy.stripe.com/test_fZe4kgajyfnD9uEaEG",
   },
 ];
 
@@ -101,7 +101,7 @@ export const Pricing = () => {
               popular,
               inverse,
               features,
-              priceId
+              checkout
             }, index) => (
               <div
                 key={index}
@@ -146,15 +146,15 @@ export const Pricing = () => {
                     /mês
                   </span>
                 </div>
-                <button
-                  onClick={() => handleCheckout(priceId)}
+                <a
+                  href={checkout}
                   className={twMerge(
-                    "btn btn-primary w-full mt-[30px]",
+                    "btn btn-primary w-full mt-[30px] cursor-pointer",
                     inverse === true && "bg-white text-black"
                   )}
                 >
                   {buttonText}
-                </button>
+                </a>
                 <ul className="flex flex-col gap-5 mt-8">
                   {features.map((feature, index) => (
                     <li key={index} className="text-sm flex items-center gap-4">

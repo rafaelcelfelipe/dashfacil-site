@@ -2,7 +2,9 @@
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
-import { loadStripe } from '@stripe/stripe-js';
+import { useState } from "react";
+import Modal from "@/components/Modal";
+import { useRouter } from "next/navigation";
 
 const pricingTiers = [
   {
@@ -53,33 +55,53 @@ const pricingTiers = [
   },
 ];
 
-
 export const Pricing = () => {
-  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [selectedCheckoutUrl, setSelectedCheckoutUrl] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const router = useRouter();
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-  const handleCheckout = async (priceId: string) => {
-    const stripe = await stripePromise;
+  const handleOpenModal = (checkoutUrl: string) => {
+    setSelectedCheckoutUrl(checkoutUrl);
+    setIsModalOpen(true);
+    setEmail("");
+    setEmailError("");
+  };
 
-    const response = await fetch('/api/create-checkout-session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ priceId }),
-    });
+  const handleEmailSubmit = async () => {
+    if (!email.trim()) {
+      setEmailError("Por favor, insira um email para continuar.");
+      return;
+    }
 
-    const data = await response.json();
-
-    if (data.sessionId) {
-      const result = await stripe!.redirectToCheckout({
-        sessionId: data.sessionId,
+    try {
+      const response = await fetch(`${backendUrl}/api/check-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
       });
 
-      if (result.error) {
-        console.error(result.error.message);
+      const data = await response.json();
+
+      if (data.exists) {
+        setEmailError(
+          "Este email já está em uso. Se você é o dono da conta e quer alterá-la, acesse app.dashfacil.com/minha-conta. Caso contrário, use outro email."
+        );
+      } else {
+        const url = new URL(selectedCheckoutUrl);
+        url.searchParams.append("prefilled_email", email);
+
+        setIsModalOpen(false);
+        router.push(url.toString());
       }
-    } else {
-      console.error(data.error);
+    } catch (error) {
+      console.error("Erro ao verificar o email:", error);
+      alert("Ocorreu um erro ao verificar o email. Por favor, tente novamente.");
+      setIsModalOpen(false);
     }
   };
 
@@ -94,15 +116,18 @@ export const Pricing = () => {
         </div>
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map(
-            ({
-              title,
-              monthlyPrice,
-              buttonText,
-              popular,
-              inverse,
-              features,
-              checkout
-            }, index) => (
+            (
+              {
+                title,
+                monthlyPrice,
+                buttonText,
+                popular,
+                inverse,
+                features,
+                checkout,
+              },
+              index
+            ) => (
               <div
                 key={index}
                 className={twMerge(
@@ -142,19 +167,24 @@ export const Pricing = () => {
                   <span className="text-4xl font-bold tracking-tighter leading-none">
                     R${monthlyPrice}
                   </span>
-                  <span className={twMerge("tracking-tight font-bold text-black/50", inverse === true && 'text-white')}>
+                  <span
+                    className={twMerge(
+                      "tracking-tight font-bold text-black/50",
+                      inverse === true && "text-white"
+                    )}
+                  >
                     /mês
                   </span>
                 </div>
-                <a
-                  href={checkout}
+                <button
+                  onClick={() => handleOpenModal(checkout)}
                   className={twMerge(
                     "btn btn-primary w-full mt-[30px] cursor-pointer",
                     inverse === true && "bg-white text-black"
                   )}
                 >
                   {buttonText}
-                </a>
+                </button>
                 <ul className="flex flex-col gap-5 mt-8">
                   {features.map((feature, index) => (
                     <li key={index} className="text-sm flex items-center gap-4">
@@ -168,6 +198,37 @@ export const Pricing = () => {
           )}
         </div>
       </div>
+
+      {/* Modal para coletar o email */}
+      {isModalOpen && (
+        <Modal onClose={() => setIsModalOpen(false)}>
+          <div className="p-6">
+            <h2 className="text-xl font-bold mb-4">Insira seu email</h2>
+            <input
+              type="email"
+              className={twMerge(
+                "w-full mb-2 border px-2 py-1 rounded-lg",
+                emailError && "border-red-500"
+              )}
+              placeholder="seuemail@exemplo.com"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (emailError) setEmailError("");
+              }}
+            />
+            {emailError && (
+              <p className="text-red-500 text-sm mb-4">{emailError}</p>
+            )}
+            <button
+              className="btn btn-primary w-full"
+              onClick={handleEmailSubmit}
+            >
+              Prosseguir
+            </button>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };

@@ -77,7 +77,9 @@ export const Pricing = () => {
     }
 
     try {
-      const response = await fetch(`${backendUrl}/api/check-email`, {
+      const url = new URL('/api/check-email', backendUrl);
+
+      const response = await fetch(url.toString(), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

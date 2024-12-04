@@ -64,7 +64,7 @@ export const Pricing = () => {
   const [selectedUrl, setSelectedUrl] = useState("");
   const [emailError, setEmailError] = useState("");
   const router = useRouter();
-  const backendUrl = "https://server.dashfacil.com";
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   const handleOpenModal = (checkoutMonthly:string) => {
     setSelectedUrl(checkoutMonthly);
@@ -81,7 +81,7 @@ export const Pricing = () => {
 
     try {
       // Verifica se o email já existe
-      const checkEmailUrl = new URL('/api/check-email', backendUrl);
+      const checkEmailUrl = `${backendUrl}/api/check-email`;
 
       const checkEmailResponse = await fetch(checkEmailUrl.toString(), {
         method: "POST",
@@ -120,8 +120,9 @@ export const Pricing = () => {
             </p>
           </div>
           <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
-            {pricingTiers.map(({checkoutMonthly, inverse, title, popular, monthlyPrice, buttonText, features}) => (
+            {pricingTiers.map(({checkoutMonthly, inverse, title, popular, monthlyPrice, buttonText, features}, index) => (
               <div
+                key={index}
                 className={twMerge(
                   "card",
                   inverse === true && "border-black bg-black text-white"

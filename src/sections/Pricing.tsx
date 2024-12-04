@@ -64,7 +64,7 @@ export const Pricing = () => {
   const [selectedUrl, setSelectedUrl] = useState("");
   const [emailError, setEmailError] = useState("");
   const router = useRouter();
-  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+  const backendUrl = "https://server.dashfacil.com";
 
   const handleOpenModal = (checkoutMonthly:string) => {
     setSelectedUrl(checkoutMonthly);

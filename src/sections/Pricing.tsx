@@ -9,15 +9,18 @@ import { useRouter } from "next/navigation";
 const pricingTiers = [
   {
     title: "Iniciante",
-    monthlyPrice: 97,
+    monthlyPrice: 147,
     buttonText: "Assinar",
     popular: false,
     inverse: false,
     features: [
-      "1 subconta",
-      "Até 50 mil leads",
+      "Até 3 subcontas",
+      "Até 20 mil leads mensais",
       "Criação de dashboards",
       "Atualização automática",
+      "Ferramentas com IA",
+      "Criador de debriefing",
+      "Compartilhar dashboard"
     ],
     checkoutMonthly:
       "https://payment-link-sdx.pagar.me/pl_bqaQnzLvw09ZAanIMi9DZJrj1Nm543E7",
@@ -29,12 +32,13 @@ const pricingTiers = [
     popular: true,
     inverse: true,
     features: [
-      "Até 5 subcontas",
-      "Até 250 mil leads",
+      "Até 10 subcontas",
+      "Até 70 mil leads mensais",
       "Criação de dashboards",
       "Atualização automática",
       "Ferramentas com IA",
       "Criador de debriefing",
+      "Compartilhar dashboard"
     ],
     checkoutMonthly:
       "https://payment-link-sdx.pagar.me/pl_48rxRdkLXY3g1kJfysnwEDBMePyZWalp",
@@ -47,11 +51,12 @@ const pricingTiers = [
     inverse: false,
     features: [
       "Até 20 subcontas",
-      "Até 1,5M leads",
+      "Até 200 mil leads mensais",
       "Criação de dashboards",
       "Atualização automática",
       "Ferramentas com IA",
       "Criador de debriefing",
+      "Compartilhar dashboard"
     ],
     checkoutMonthly:
       "https://payment-link-sdx.pagar.me/pl_AjZG8D457Lb0XV5mFVTnqrep1kaW6PxO",
